@@ -18,4 +18,21 @@ export class HeroComponent {
     return `${this.name} - ${this.age}`
   }
 
+  changeHero():void {
+    this.name = 'spiderman';
+  }
+
+  changeAge():void{
+    this.age = 19;
+  }
+
+  reset():void{
+    //this.name = 'ironman';
+    this.age = 45;
+
+    // EVITAR USAR INNERHTML, DEBIDO A QUE SE PIERDE EL VALOR DE LAS PROPIEDADES DE LAS CLASES
+    // document.querySelector('h1')!.innerHTML = '<h1>Desde Angular</h1>';
+    // document.querySelectorAll('h1')!.forEach(element => {element.innerHTML = '<h1>Desde Angular</h1>'});
+  }
+
 }
