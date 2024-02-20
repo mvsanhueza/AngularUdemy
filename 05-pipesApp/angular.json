@@ -5,7 +5,17 @@
   "projects": {
     "pipesApp": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,7 +35,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-dark-indigo/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeflex/primeflex.min.css"
             ],
             "scripts": []
           },
@@ -60,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pipesApp:build:production"
+              "buildTarget": "pipesApp:build:production"
             },
             "development": {
-              "browserTarget": "pipesApp:build:development"
+              "buildTarget": "pipesApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pipesApp:build"
+            "buildTarget": "pipesApp:build"
           }
         },
         "test": {
@@ -94,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d7a4533d-1cf4-4f1c-9a19-7d50d201b766"
   }
 }
