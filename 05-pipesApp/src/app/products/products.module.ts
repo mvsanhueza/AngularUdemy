@@ -7,6 +7,11 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
+import { OrderComponent } from './pages/order/order.component';
+
+import { ToggleCasePipe } from './pages/pipes/toggle-case.pipe';
+import { CanFlyPipe } from './pages/pipes/can-fly.pipe';
+import { SortByPipe } from './pages/pipes/sort-by.pipe';
 
 
 
@@ -14,7 +19,14 @@ import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.compo
   declarations: [
     BasicsPageComponent,
     NumbersPageComponent,
-    UncommonPageComponent
+    UncommonPageComponent,
+    OrderComponent,
+
+    //Pipes
+    CanFlyPipe,
+    SortByPipe,
+    ToggleCasePipe,
+
   ],
   imports: [
     CommonModule,
