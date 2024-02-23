@@ -12,6 +12,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardComponent } from './components/card/card.component';
 import { ImagePipe } from './pipes/image.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
 
     //Pipess
-    ImagePipe
+    ImagePipe,
+     ConfirmDialogComponent
   ],
   imports: [
     CommonModule,
