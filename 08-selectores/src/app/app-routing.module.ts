@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   {
-    path: '',
+    path: 'selector',
     loadChildren: () => import('./countries/countries.module').then(m=>m.CountriesModule)
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'selector'
   }
 ];
 
