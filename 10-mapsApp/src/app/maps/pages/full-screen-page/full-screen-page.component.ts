@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import {Map} from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+import { Map } from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
 
 @Component({
   templateUrl: './full-screen-page.component.html',
@@ -17,7 +17,7 @@ export class FullScreenPageComponent implements AfterViewInit {
 
     console.log(this.divMap);
 
-    if(!this.divMap)
+    if (!this.divMap)
       throw 'Elemento html no fue encontrado';
 
     const map = new Map({
